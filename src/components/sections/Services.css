@@ -1,0 +1,69 @@
+#services {
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 1100px;
+}
+#services h2 {
+  text-align: center;
+  color: #D6FE51;
+}
+#services .services-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #D6FE51;
+}
+#services .services-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#services .service-card {
+  flex: 1;
+  min-width: 260px;
+  max-width: 340px;
+  background: #000;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  border: 2px solid #D6FE51;
+}
+#services .service-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #D6FE51;
+}
+#services .service-desc {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+#services ul {
+  margin: 0 0 18px 18px;
+  padding: 0;
+  color: #D6FE51;
+  font-size: 0.98rem;
+}
+#services .service-btn {
+  margin-top: auto;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #000;
+  color: #D6FE51;
+  border: 2px solid #D6FE51;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#services .service-btn:hover {
+  background: #D6FE51;
+  color: #000;
+}

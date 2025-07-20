@@ -1,0 +1,118 @@
+#contacts .contacts-info-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #D6FE51;
+}
+#contacts .contacts-info-value {
+  font-size: 1rem;
+  color: #D6FE51;
+  margin-bottom: 20px;
+}
+#contacts .contacts-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #D6FE51;
+  font-size: 1rem;
+  background: #000;
+  color: #fff;
+  margin-bottom: 8px;
+}
+#contacts .contacts-btn {
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #D6FE51;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#contacts .contacts-btn:hover {
+  background: #fff;
+  color: #000;
+}
+#contacts {
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 900px;
+}
+#contacts h2 {
+  text-align: center;
+  color: #D6FE51;
+}
+#contacts .contacts-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #D6FE51;
+}
+#contacts .contacts-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#contacts .contacts-info {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  background: #000;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 24px;
+  color: #fff;
+  border: 2px solid #D6FE51;
+}
+#contacts .contacts-info-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #D6FE51;
+}
+#contacts .contacts-info-value {
+  font-size: 1rem;
+  color: #D6FE51;
+  margin-bottom: 20px;
+}
+#contacts form {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  background: #000;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 2px solid #D6FE51;
+}
+#contacts input, #contacts textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #D6FE51;
+  font-size: 1rem;
+  background: #000;
+  color: #fff;
+}
+#contacts button[type="submit"] {
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #D6FE51;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#contacts button[type="submit"]:hover {
+  background: #fff;
+  color: #000;
+}

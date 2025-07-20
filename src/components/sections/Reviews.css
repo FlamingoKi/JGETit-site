@@ -1,0 +1,31 @@
+#reviews {
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 900px;
+}
+#reviews h2 {
+  text-align: center;
+  color: #D6FE51;
+}
+#reviews .reviews-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #D6FE51;
+}
+#reviews .reviews-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 12px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #0001;
+  border: 2px solid #D6FE51;
+}
