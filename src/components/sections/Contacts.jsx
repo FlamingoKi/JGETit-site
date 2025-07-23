@@ -1,27 +1,124 @@
 import React from "react";
-import "./Contacts.css";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
 
 export default function Contacts() {
   return (
-    <section id="contacts">
-      <h2>Свяжитесь с нами</h2>
-      <div className="contacts-subtitle">Готовы начать свой следующий проект? Давайте обсудим ваши потребности</div>
-      <div className="contacts-row">
-        <div className="contacts-info">
-          <div className="contacts-info-title">Напишите нам</div>
-          <div className="contacts-info-value">hello@tsifrovyeresheniya.com</div>
-          <div className="contacts-info-title">Позвоните нам</div>
-          <div className="contacts-info-value">+7 (999) 123-4567</div>
-          <div className="contacts-info-title">Посетите нас</div>
-          <div className="contacts-info-value">ул. Инновационная, 123<br />Москва, 123456</div>
-        </div>
-        <form>
-          <input className="contacts-input" type="text" placeholder="Имя" required />
-          <input className="contacts-input" type="email" placeholder="Электронная почта" required />
-          <textarea className="contacts-input" placeholder="Сообщение" rows={4} required></textarea>
-          <button className="contacts-btn" type="submit">Отправить сообщение</button>
-        </form>
-      </div>
-    </section>
+    <Box component="section" id="contacts" sx={{ mb: 6, width: "100%", maxWidth: 900, mx: "auto" }}>
+      <Typography variant="h4" align="center" gutterBottom>
+        Свяжитесь с нами
+      </Typography>
+      <Typography variant="subtitle1" align="center" gutterBottom>
+        Готовы начать свой следующий проект? Давайте обсудим ваши потребности
+      </Typography>
+      <Stack direction={{ xs: "column", md: "row" }} spacing={5} justifyContent="center" alignItems="flex-start" sx={{ mt: 4 }}>
+        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 380, p: 3, mb: 3, borderRadius: 2, background: "#000" }}>
+          <Typography variant="h6" color="#D6FE51" gutterBottom>
+            Напишите нам
+          </Typography>
+          <Typography variant="body2" color="#D6FE51" gutterBottom>
+            hello@tsifrovyeresheniya.com
+          </Typography>
+          <Typography variant="h6" color="#D6FE51" gutterBottom>
+            Позвоните нам
+          </Typography>
+          <Typography variant="body2" color="#D6FE51" gutterBottom>
+            +7 (999) 123-4567
+          </Typography>
+          <Typography variant="h6" color="#D6FE51" gutterBottom>
+            Посетите нас
+          </Typography>
+          <Typography variant="body2" color="#D6FE51">
+            ул. Инновационная, 123<br />Москва, 123456
+          </Typography>
+        </Paper>
+        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 380, p: 3, mb: 3, borderRadius: 2, border: "2px solid #D6FE51", background: "#000" }}>
+          <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+            <TextField
+              label="Имя"
+              name="name"
+              variant="outlined"
+              required
+              fullWidth
+              InputLabelProps={{ style: { color: "#D6FE51" } }}
+              InputProps={{
+                style: { color: "#fff" },
+                sx: {
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  }
+                }
+              }}
+            />
+            <TextField
+              label="Электронная почта"
+              name="email"
+              type="email"
+              variant="outlined"
+              required
+              fullWidth
+              InputLabelProps={{ style: { color: "#D6FE51" } }}
+              InputProps={{
+                style: { color: "#fff" },
+                sx: {
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  }
+                }
+              }}
+            />
+            <TextField
+              label="Сообщение"
+              name="message"
+              variant="outlined"
+              required
+              fullWidth
+              multiline
+              rows={4}
+              InputLabelProps={{ style: { color: "#D6FE51" } }}
+              InputProps={{
+                style: { color: "#fff" },
+                sx: {
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#D6FE51"
+                  }
+                }
+              }}
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="success"
+              fullWidth
+              sx={{ fontWeight: 600 }}
+            >
+              Отправить сообщение
+            </Button>
+          </Box>
+        </Paper>
+      </Stack>
+    </Box>
   );
 }

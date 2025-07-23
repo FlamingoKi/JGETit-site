@@ -1,4 +1,3 @@
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -64,4 +63,6 @@ button:focus-visible {
   outline: 4px auto #D6FE51;
 }
 
-
+section {
+  margin-bottom: 48px;
+}

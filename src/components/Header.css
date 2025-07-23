@@ -1,11 +1,4 @@
-header {
-  background: #000;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-}
+/* Очищено: все стили перенесены в MUI */
 .header-logo-box {
   display: flex;
   align-items: center;

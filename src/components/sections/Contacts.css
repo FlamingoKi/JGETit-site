@@ -1,9 +1,4 @@
-#contacts .contacts-info-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #D6FE51;
-}
+/* Очищено: все стили перенесены в MUI */
 #contacts .contacts-info-value {
   font-size: 1rem;
   color: #D6FE51;

@@ -1,14 +1,25 @@
 import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import "./Reviews.css";
 
 export default function Reviews() {
   return (
     <section id="reviews">
-      <h2>Что говорят наши клиенты</h2>
-      <div className="reviews-subtitle">Реальные отзывы от довольных клиентов</div>
-      <div className="reviews-box">
-        Здесь будет форма с отзывами
-      </div>
+      <Typography variant="h4" align="center" gutterBottom>
+        Что говорят наши клиенты
+      </Typography>
+      <Typography variant="subtitle1" align="center" className="reviews-subtitle" gutterBottom>
+        Реальные отзывы от довольных клиентов
+      </Typography>
+      <Card className="reviews-box" variant="outlined">
+        <CardContent>
+          <Typography variant="body1" align="center">
+            Здесь будет форма с отзывами
+          </Typography>
+        </CardContent>
+      </Card>
     </section>
   );
 }

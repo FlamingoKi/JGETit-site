@@ -1,5 +1,5 @@
+/* Восстановим layout для первой секции (Home) */
 #home {
-  margin-bottom: 48px;
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -7,6 +7,44 @@
   align-items: center;
   gap: 40px;
   min-height: 340px;
+}
+#home .home-left {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home .home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: #D6FE51;
+}
+#home .home-btns {
+  display: flex;
+  gap: 16px;
+}
+#home .home-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
+#home .home-video-box {
+  width: 100%;
+  max-width: 340px;
+  height: 200px;
+  background: #000;
+  border: 2px solid #D6FE51;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
 }
 #home .home-left {
   flex: 1;

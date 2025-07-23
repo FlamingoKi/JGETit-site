@@ -1,15 +1,40 @@
 import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import "./Portfolio.css";
 
 export default function Portfolio() {
   return (
     <section id="portfolio">
-      <h2>Портфолио</h2>
-      <div className="portfolio-subtitle">Демонстрируем наши лучшие работы и успешные проекты</div>
+      <Typography variant="h4" align="center" gutterBottom>
+        Портфолио
+      </Typography>
+      <Typography variant="subtitle1" align="center" className="portfolio-subtitle" gutterBottom>
+        Демонстрируем наши лучшие работы и успешные проекты
+      </Typography>
       <div className="portfolio-row">
-        <div className="portfolio-card">Работа 1</div>
-        <div className="portfolio-card">Работа 2</div>
-        <div className="portfolio-card">Работа 3</div>
+        <Card className="portfolio-card" variant="outlined">
+          <CardContent>
+            <Typography variant="body1" align="center">
+              Работа 1
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className="portfolio-card" variant="outlined">
+          <CardContent>
+            <Typography variant="body1" align="center">
+              Работа 2
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className="portfolio-card" variant="outlined">
+          <CardContent>
+            <Typography variant="body1" align="center">
+              Работа 3
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

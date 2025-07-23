@@ -1,41 +1,126 @@
 import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
 import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="footer-row">
-        <div className="footer-col footer-brand">
-          <div className="footer-brand-title">ЦифровыеРешения</div>
-          <div className="footer-brand-desc">Повышаем уровень бизнеса с помощью передовых цифровых решений</div>
-        </div>
-        <div className="footer-col footer-services">
-          <div className="footer-col-title">Услуги</div>
-          <ul className="footer-list">
-            <li className="footer-list-item"><a className="footer-link" href="#services">Разработка сайтов</a></li>
-            <li className="footer-list-item"><a className="footer-link" href="#services">Создание чат-ботов</a></li>
-            <li className="footer-list-item"><a className="footer-link" href="#services">Пользовательские скрипты</a></li>
-          </ul>
-        </div>
-        <div className="footer-col footer-company">
-          <div className="footer-col-title">Компания</div>
-          <ul className="footer-list">
-            <li className="footer-list-item"><a className="footer-link" href="#about">О нас</a></li>
-            <li className="footer-list-item"><a className="footer-link" href="#portfolio">Портфолио</a></li>
-            <li className="footer-list-item"><a className="footer-link" href="#reviews">Отзывы</a></li>
-          </ul>
-        </div>
-        <div className="footer-col footer-contacts">
-          <div className="footer-col-title">Связь</div>
-          <div className="footer-contacts-btns">
-            <button className="footer-contact-btn">@</button>
-            <button className="footer-contact-btn">☎</button>
-            <button className="footer-contact-btn">✉</button>
-            <button className="footer-contact-btn">🌐</button>
-          </div>
-        </div>
-      </div>
-      <div className="footer-copyright">© 2025 Ваш сайт</div>
-    </footer>
+    <Box component="footer" sx={{ background: "#000", py: 5, px: 0, color: "#fff", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <Box className="footer-row" sx={{ width: "100%", maxWidth: 1200, display: "flex", justifyContent: "space-between", gap: 4, flexWrap: "wrap" }}>
+        <Box className="footer-col footer-brand" sx={{ minWidth: 160, maxWidth: 300, mb: 3 }}>
+          <Typography variant="h6" className="footer-brand-title" sx={{ color: "#D6FE51", mb: 1 }}>
+            ЦифровыеРешения
+          </Typography>
+          <Typography variant="body2" className="footer-brand-desc">
+            Повышаем уровень бизнеса с помощью передовых цифровых решений
+          </Typography>
+        </Box>
+        <Box className="footer-col footer-services" sx={{ minWidth: 160, maxWidth: 300, mb: 3 }}>
+          <Typography variant="subtitle1" className="footer-col-title" sx={{ color: "#D6FE51", mb: 1 }}>
+            Услуги
+          </Typography>
+          <List sx={{ p: 0 }}>
+            {["Разработка сайтов", "Создание чат-ботов", "Пользовательские скрипты"].map((text) => (
+              <ListItem key={text} sx={{ p: 0, mb: 1 }}>
+                <Link
+                  href="#services"
+                  underline="none"
+                  sx={{
+                    color: "#D6FE51",
+                    fontSize: "1rem",
+                    fontWeight: 400,
+                    transition: "color 0.2s",
+                    position: "relative",
+                    "&:hover": {
+                      color: "#fff",
+                    },
+                    "&:after": {
+                      content: '""',
+                      display: "block",
+                      borderBottom: "2px solid #D6FE51",
+                      width: "100%",
+                      transform: "scaleX(0)",
+                      transition: "transform 0.2s",
+                      position: "absolute",
+                      left: 0,
+                      bottom: -2,
+                    },
+                    "&:hover:after": {
+                      transform: "scaleX(1)",
+                    },
+                  }}
+                >
+                  {text}
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+        <Box className="footer-col footer-company" sx={{ minWidth: 160, maxWidth: 300, mb: 3 }}>
+          <Typography variant="subtitle1" className="footer-col-title" sx={{ color: "#D6FE51", mb: 1 }}>
+            Компания
+          </Typography>
+          <List sx={{ p: 0 }}>
+            { [
+                { label: "О нас", href: "#about" },
+                { label: "Портфолио", href: "#portfolio" },
+                { label: "Отзывы", href: "#reviews" },
+              ].map((item) => (
+              <ListItem key={item.href} sx={{ p: 0, mb: 1 }}>
+                <Link
+                  href={item.href}
+                  underline="none"
+                  sx={{
+                    color: "#D6FE51",
+                    fontSize: "1rem",
+                    fontWeight: 400,
+                    transition: "color 0.2s",
+                    position: "relative",
+                    "&:hover": {
+                      color: "#fff",
+                    },
+                    "&::after": {
+                      content: '""',
+                      display: "block",
+                      borderBottom: "2px solid #D6FE51",
+                      width: "100%",
+                      position: "absolute",
+                      left: 0,
+                      bottom: -2,
+                      transform: "scaleX(0)",
+                      transition: "transform 0.2s",
+                    },
+                    "&:hover::after": {
+                      transform: "scaleX(1)",
+                    },
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+        <Box className="footer-col footer-contacts" sx={{ minWidth: 160, maxWidth: 300, mb: 3 }}>
+          <Typography variant="subtitle1" className="footer-col-title" sx={{ color: "#D6FE51", mb: 1 }}>
+            Связь
+          </Typography>
+          <Stack direction="row" spacing={1} className="footer-contacts-btns">
+            <Button variant="contained" sx={{ minWidth: 44, minHeight: 44, borderRadius: 1, background: "#D6FE51", color: "#000", fontSize: "1.3rem", "&:hover": { background: "#fff", color: "#000" } }}>@</Button>
+            <Button variant="contained" sx={{ minWidth: 44, minHeight: 44, borderRadius: 1, background: "#D6FE51", color: "#000", fontSize: "1.3rem", "&:hover": { background: "#fff", color: "#000" } }}>☎</Button>
+            <Button variant="contained" sx={{ minWidth: 44, minHeight: 44, borderRadius: 1, background: "#D6FE51", color: "#000", fontSize: "1.3rem", "&:hover": { background: "#fff", color: "#000" } }}>✉</Button>
+            <Button variant="contained" sx={{ minWidth: 44, minHeight: 44, borderRadius: 1, background: "#D6FE51", color: "#000", fontSize: "1.3rem", "&:hover": { background: "#fff", color: "#000" } }}>🌐</Button>
+          </Stack>
+        </Box>
+      </Box>
+      <Typography className="footer-copyright" sx={{ color: "#D6FE51", fontSize: "0.95rem", mt: 3, width: "100%", textAlign: "center" }}>
+        © 2025 Ваш сайт
+      </Typography>
+    </Box>
   );
 }
