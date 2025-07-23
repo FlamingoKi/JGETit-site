@@ -1,4 +1,3 @@
-
 #about h2 {
   text-align: center;
   color: #D6FE51;
@@ -12,15 +11,18 @@
 }
 #about .about-row {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 #about .about-left {
   flex: 1;
   min-width: 260px;
-  max-width: 420px;
+  max-width: 380px;
 }
 #about .about-block-title {
   font-size: 1.1rem;
@@ -34,18 +36,18 @@
 }
 #about .about-right {
   flex: 1;
-  min-width: 220px;
-  max-width: 320px;
+  min-width: 200px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
 #about .about-stats {
   background: #000;
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 20px 12px;
   width: 100%;
   display: flex;
   flex-direction: column;

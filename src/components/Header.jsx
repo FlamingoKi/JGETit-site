@@ -30,7 +30,7 @@ export default function Header() {
   }, []);
 
   return (
-    <AppBar position="static" color="default" elevation={0} sx={{ background: "#000", borderBottom: "2px solid #D6FE51" }}>
+    <AppBar position="fixed" color="default" elevation={0} sx={{ background: "#000" }}>
       <Toolbar sx={{ justifyContent: "flex-start", minHeight: "90px", px: { xs: 2, md: 6 } }}>
         <Box sx={{ display: "flex", alignItems: "center", flex: "0 0 auto" }}>
           <img

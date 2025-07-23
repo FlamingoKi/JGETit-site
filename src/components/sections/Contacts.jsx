@@ -16,7 +16,7 @@ export default function Contacts() {
         Готовы начать свой следующий проект? Давайте обсудим ваши потребности
       </Typography>
       <Stack direction={{ xs: "column", md: "row" }} spacing={5} justifyContent="center" alignItems="flex-start" sx={{ mt: 4 }}>
-        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 380, p: 3, mb: 3, borderRadius: 2, background: "#000" }}>
+        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 340, p: 3, mb: 3, borderRadius: 2, background: "#000" }}>
           <Typography variant="h6" color="#D6FE51" gutterBottom>
             Напишите нам
           </Typography>
@@ -36,7 +36,7 @@ export default function Contacts() {
             ул. Инновационная, 123<br />Москва, 123456
           </Typography>
         </Paper>
-        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 380, p: 3, mb: 3, borderRadius: 2, border: "2px solid #D6FE51", background: "#000" }}>
+        <Paper elevation={3} sx={{ flex: 1, minWidth: 260, maxWidth: 340, p: 3, mb: 3, borderRadius: 2, border: "2px solid #D6FE51", background: "#000" }}>
           <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
             <TextField
               label="Имя"
@@ -112,7 +112,20 @@ export default function Contacts() {
               variant="contained"
               color="success"
               fullWidth
-              sx={{ fontWeight: 600 }}
+              sx={{
+                fontWeight: 600,
+                background: "#D6FE51",
+                color: "#000",
+                borderRadius: "6px",
+                border: "2px solid #D6FE51",
+                boxShadow: "none",
+                transition: "background 0.2s, color 0.2s",
+                "&:hover": {
+                  background: "#fff",
+                  color: "#000",
+                  borderColor: "#D6FE51"
+                }
+              }}
             >
               Отправить сообщение
             </Button>

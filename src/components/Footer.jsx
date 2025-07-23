@@ -10,7 +10,19 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ background: "#000", py: 5, px: 0, color: "#fff", display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <Box
+      component="footer"
+      sx={{
+        background: "#000",
+        py: 5,
+        px: 0,
+        color: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        borderTop: "2px solid #D6FE51"
+      }}
+    >
       <Box className="footer-row" sx={{ width: "100%", maxWidth: 1200, display: "flex", justifyContent: "space-between", gap: 4, flexWrap: "wrap" }}>
         <Box className="footer-col footer-brand" sx={{ minWidth: 160, maxWidth: 300, mb: 3 }}>
           <Typography variant="h6" className="footer-brand-title" sx={{ color: "#D6FE51", mb: 1 }}>

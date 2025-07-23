@@ -8,7 +8,7 @@ import Contacts from "./sections/Contacts";
 
 export default function Main() {
   return (
-    <main style={{flex: 1, padding: 20, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    <main style={{flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0}}>
       <Home />
       <About />
       <Services />

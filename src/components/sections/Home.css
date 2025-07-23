@@ -1,69 +1,44 @@
 /* Восстановим layout для первой секции (Home) */
 #home {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  min-height: 340px;
+  padding-top: 90px;
+  box-sizing: border-box;
 }
-#home .home-left {
-  flex: 1;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#home .home-title {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 32px;
-  color: #D6FE51;
-}
-#home .home-btns {
-  display: flex;
-  gap: 16px;
-}
+
+#home .home-left,
 #home .home-video {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 220px;
-}
-#home .home-video-box {
+  flex: unset;
+  max-width: 420px;
   width: 100%;
-  max-width: 340px;
-  height: 200px;
-  background: #000;
-  border: 2px solid #D6FE51;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.1rem;
-}
-#home .home-left {
-  flex: 1;
-  text-align: left;
   display: flex;
   flex-direction: column;
+  align-items: center; /* Центрируем содержимое */
   justify-content: center;
+  text-align: center;  /* Центрируем текст */
 }
+
 #home .home-title {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 32px;
   color: #D6FE51;
+  text-align: center; /* Центрируем заголовок */
 }
+
 #home .home-btns {
   display: flex;
   gap: 16px;
+  justify-content: center; /* Центрируем кнопки */
 }
+
 #home .home-btn {
   padding: 12px 28px;
   font-size: 1rem;
@@ -75,6 +50,26 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+#home .home-btn:hover {
+  background: #D6FE51;
+  color: #000;
+}
+#home .home-btn-alt {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #000;
+  color: #fff;
+  border: 2px solid #D6FE51;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#home .home-btn-alt:hover {
+  background: #D6FE51;
+  color: #000;
+}
+
 #home .home-btn:hover {
   background: #D6FE51;
   color: #000;
