@@ -2,10 +2,12 @@ import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 export default function App() {
   return (
-    <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '90px'}}>
+    <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '90px', position: 'relative'}}>
+      <AnimatedBackground />
       <Header />
       <Main />
       <Footer />
