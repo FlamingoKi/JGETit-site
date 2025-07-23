@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 
-const ORB_COLOR = "rgba(214,254,81,0.7)";
+const ORB_COLOR = "rgba(177, 211, 68, 0.47)";
 const ORB_MIN_RADIUS = 40;
 const ORB_MAX_RADIUS = 120;
-const ORB_COUNT = 7;
+const ORB_COUNT = 4;
 const ORB_MIN_SPEED = 0.08;
 const ORB_MAX_SPEED = 0.18;
 
@@ -11,11 +11,28 @@ function randomBetween(a, b) {
   return a + Math.random() * (b - a);
 }
 
+// Орбы преимущественно по бокам (левая 30% и правая 30% ширины)
 function createOrb(width, height) {
   const radius = randomBetween(ORB_MIN_RADIUS, ORB_MAX_RADIUS);
+  // 70% шанс — орб появится в боковых зонах, 30% — где угодно
+  let x;
+  const sideZone = width * 0.3;
+  if (Math.random() < 0.7) {
+    if (Math.random() < 0.5) {
+      // левая сторона
+      x = randomBetween(radius, sideZone - radius);
+    } else {
+      // правая сторона
+      x = randomBetween(width - sideZone + radius, width - radius);
+    }
+  } else {
+    // где угодно
+    x = randomBetween(radius, width - radius);
+  }
+  const y = randomBetween(radius, height - radius);
   return {
-    x: randomBetween(radius, width - radius),
-    y: randomBetween(radius, height - radius),
+    x,
+    y,
     vx: randomBetween(-ORB_MAX_SPEED, ORB_MAX_SPEED),
     vy: randomBetween(-ORB_MAX_SPEED, ORB_MAX_SPEED),
     baseRadius: radius,

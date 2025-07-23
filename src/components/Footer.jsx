@@ -13,14 +13,14 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        background: "#000",
+        background: "rgba(0,0,0,0)",
         py: 5,
         px: 0,
         color: "#fff",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        borderTop: "2px solid #D6FE51"
+        borderTop: "1px solid #d6fe513f" // толщина уменьшена с 2px до 1px
       }}
     >
       <Box className="footer-row" sx={{ width: "100%", maxWidth: 1200, display: "flex", justifyContent: "space-between", gap: 4, flexWrap: "wrap" }}>
