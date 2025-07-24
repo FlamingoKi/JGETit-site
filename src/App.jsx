@@ -5,15 +5,20 @@ import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import DustParticlesBackground from "./components/DustParticlesBackground";
 
+import CursorEffect from "./components/CursorEffect";
+
 export default function App() {
   return (
-    <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '90px', position: 'relative'}}>
-      {/* DustParticlesBackground должен быть выше AnimatedBackground по z-index */}
-      <DustParticlesBackground />
-      <AnimatedBackground />
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <>
+      <CursorEffect />
+      <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '90px', position: 'relative'}}>
+        {/* DustParticlesBackground должен быть выше AnimatedBackground по z-index */}
+        <DustParticlesBackground />
+        <AnimatedBackground />
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </>
   );
 }
