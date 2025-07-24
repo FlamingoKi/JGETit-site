@@ -7,8 +7,24 @@ export default function Home() {
   return (
     <section id="home">
       <div className="home-left">
-        <Typography variant="h4" className="home-title" gutterBottom>
-          Мы создаем сайты,<br />которые продают.<br />Чат-боты, которые<br />удивляют.<br />Скрипты, которые<br />экономят время.
+        <Typography
+          variant="h1"
+          className="home-title"
+          gutterBottom
+          sx={{
+            fontSize: { xs: "2.3rem", sm: "3.2rem", md: "4.2rem", lg: "4.8rem" },
+            fontWeight: 900,
+            lineHeight: 1.13,
+            color: "#D6FE51",
+            textAlign: "left",
+            mb: 4,
+            letterSpacing: "-0.03em",
+            maxWidth: "600px"
+          }}
+        >
+          Мы создаем сайты, которые продают.<br />
+          Чат-боты, которые удивляют.<br />
+          Скрипты, которые экономят время.
         </Typography>
         <div className="home-btns">
           <Button
@@ -66,7 +82,14 @@ export default function Home() {
       </div>
       <div className="home-video">
         <div className="home-video-box">
-          Здесь будет видео
+          <div className="home-welcome-text">
+            <strong>Добро пожаловать!</strong>
+            <br /><br />
+            Мы создаем цифровые решения,<br />
+            которые работают на вас
+            <br /><br />
+            <span style={{ fontWeight: 700 }}>Ваша идея – наш код</span>
+          </div>
         </div>
       </div>
     </section>
