@@ -60,7 +60,9 @@
   justify-content: center;
   align-items: center;
   min-height: 220px;
+  /* Удалить дублирующиеся opacity/transform, оставить только для анимации появления */
 }
+
 #home .home-video-box {
   width: 100%;
   max-width: 340px;
@@ -170,11 +172,47 @@
     transform: translateY(0) rotate(-2deg) scale(1.01);
   }
 }
-/* Чтобы убрать паузу, сделайте анимацию "бесшовной":
-   - Начальное и конечное состояние должны быть идентичны.
-   - Не используйте cubic-bezier с замедлением в конце, только linear.
-   - Можно добавить больше промежуточных кадров, чтобы движение было равномерным.
-*/
-   - Не используйте cubic-bezier с замедлением в конце, только linear.
-   - Можно добавить больше промежуточных кадров, чтобы движение было равномерным.
-*/
+
+/* Появление кнопок и формы */
+.typing-cursor {
+  display: inline-block;
+  width: 1.1ch;
+  height: 1.1em;
+  background: none;
+  border-right: 2px solid #D6FE51;
+  margin-left: 2px;
+  animation: blink-cursor 0.9s steps(1) infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink-cursor {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0; }
+}
+
+/* Кнопки появляются снизу с fade-in */
+.home-animated-btns {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,1.6,.4,1), transform 0.7s cubic-bezier(.4,1.6,.4,1);
+  pointer-events: none;
+}
+.home-btns-in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Зеленая форма появляется справа с fade-in */
+.home-video {
+  /* эти стили нужны только для анимации появления */
+  /* не дублируйте .home-video выше, иначе flex-контейнер ломается */
+  transition: opacity 0.7s cubic-bezier(.4,1.6,.4,1), transform 0.7s cubic-bezier(.4,1.6,.4,1);
+  opacity: 0;
+  transform: translateX(60px);
+}
+.home-form-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
