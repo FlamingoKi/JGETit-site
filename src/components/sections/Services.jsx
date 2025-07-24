@@ -29,7 +29,32 @@ export default function Services() {
               <li>Оптимизация производительности</li>
               <li>Пользовательские CMS решения</li>
             </ul>
-            <Button variant="outlined" color="success" className="service-btn">Узнать больше</Button>
+            <Button
+              variant="outlined"
+              color="success"
+              className="service-btn"
+              sx={{
+                borderRadius: "32px !important", // принудительно округляем
+                background: "#000",
+                color: "#D6FE51",
+                fontWeight: 600,
+                px: 3,
+                py: 1.2,
+                border: "2px solid #D6FE51 !important",
+                boxShadow: "none",
+                transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                "& .MuiButton-startIcon, & .MuiButton-endIcon": {
+                  borderRadius: "32px"
+                },
+                "&:hover": {
+                  background: "#D6FE51",
+                  color: "#000",
+                  borderColor: "#D6FE51"
+                }
+              }}
+            >
+              Узнать больше
+            </Button>
           </CardContent>
         </Card>
         <Card className="service-card" variant="outlined">
@@ -46,7 +71,32 @@ export default function Services() {
               <li>Поддержка клиентов 24/7</li>
               <li>Аналитика и инсайты</li>
             </ul>
-            <Button variant="outlined" color="success" className="service-btn">Узнать больше</Button>
+            <Button
+              variant="outlined"
+              color="success"
+              className="service-btn"
+              sx={{
+                borderRadius: "32px !important", // принудительно округляем
+                background: "#000",
+                color: "#D6FE51",
+                fontWeight: 600,
+                px: 3,
+                py: 1.2,
+                border: "2px solid #D6FE51 !important",
+                boxShadow: "none",
+                transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                "& .MuiButton-startIcon, & .MuiButton-endIcon": {
+                  borderRadius: "32px"
+                },
+                "&:hover": {
+                  background: "#D6FE51",
+                  color: "#000",
+                  borderColor: "#D6FE51"
+                }
+              }}
+            >
+              Узнать больше
+            </Button>
           </CardContent>
         </Card>
         <Card className="service-card" variant="outlined">
@@ -63,7 +113,32 @@ export default function Services() {
               <li>Обработка данных</li>
               <li>Пользовательские инструменты</li>
             </ul>
-            <Button variant="outlined" color="success" className="service-btn">Узнать больше</Button>
+            <Button
+              variant="outlined"
+              color="success"
+              className="service-btn"
+              sx={{
+                borderRadius: "32px !important", // принудительно округляем
+                background: "#000",
+                color: "#D6FE51",
+                fontWeight: 600,
+                px: 3,
+                py: 1.2,
+                border: "2px solid #D6FE51 !important",
+                boxShadow: "none",
+                transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                "& .MuiButton-startIcon, & .MuiButton-endIcon": {
+                  borderRadius: "32px"
+                },
+                "&:hover": {
+                  background: "#D6FE51",
+                  color: "#000",
+                  borderColor: "#D6FE51"
+                }
+              }}
+            >
+              Узнать больше
+            </Button>
           </CardContent>
         </Card>
       </div>

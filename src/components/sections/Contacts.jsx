@@ -113,15 +113,15 @@ export default function Contacts() {
               color="success"
               fullWidth
               sx={{
+                borderRadius: "32px",
                 fontWeight: 600,
                 background: "#D6FE51",
                 color: "#000",
-                borderRadius: "6px",
                 border: "2px solid #D6FE51",
                 boxShadow: "none",
-                transition: "background 0.2s, color 0.2s",
+                transition: "background 0.2s, color 0.2s, border-color 0.2s",
                 "&:hover": {
-                  background: "#fff",
+                  background: "#D6FE51",
                   color: "#000",
                   borderColor: "#D6FE51"
                 }

@@ -39,32 +39,27 @@
   justify-content: center; /* Центрируем кнопки */
 }
 
-#home .home-btn {
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
+#home .home-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
+#home .home-video-box {
+  width: 100%;
+  max-width: 340px;
+  height: 200px;
   background: #000;
-  color: #D6FE51;
   border: 2px solid #D6FE51;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-#home .home-btn:hover {
-  background: #D6FE51;
-  color: #000;
-}
-#home .home-btn-alt {
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  border: 2px solid #D6FE51;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  font-size: 1.1rem;
 }
+
 #home .home-btn-alt:hover {
   background: #D6FE51;
   color: #000;
