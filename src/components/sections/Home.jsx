@@ -24,11 +24,12 @@ export default function Home() {
               py: 1.5,
               border: "2px solid #D6FE51",
               boxShadow: "none",
-              transition: "background 0.2s, color 0.2s",
+              transition: "background 0.2s, color 0.2s, box-shadow 0.2s",
               "&:hover": {
                 background: "#D6FE51",
                 color: "#000",
-                borderColor: "#D6FE51"
+                borderColor: "#D6FE51",
+                boxShadow: "0 6px 18px 0 #D6FE5180" // менее яркое свечение
               }
             }}
           >
@@ -39,7 +40,7 @@ export default function Home() {
             color="inherit"
             className="home-btn-alt"
             sx={{
-              borderRadius: "32px !important", // принудительно округляем
+              borderRadius: "32px !important",
               background: "#000",
               color: "#D6FE51",
               fontWeight: 700,
@@ -55,6 +56,7 @@ export default function Home() {
                 background: "#D6FE51",
                 color: "#000",
                 borderColor: "#D6FE51"
+                // без свечения
               }
             }}
           >

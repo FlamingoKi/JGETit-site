@@ -119,11 +119,12 @@ export default function Contacts() {
                 color: "#000",
                 border: "2px solid #D6FE51",
                 boxShadow: "none",
-                transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                transition: "background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s",
                 "&:hover": {
                   background: "#D6FE51",
                   color: "#000",
-                  borderColor: "#D6FE51"
+                  borderColor: "#D6FE51",
+                  boxShadow: "0 6px 18px 0 #D6FE5180" // менее яркое свечение
                 }
               }}
             >

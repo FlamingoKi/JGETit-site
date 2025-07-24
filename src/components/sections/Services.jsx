@@ -34,7 +34,7 @@ export default function Services() {
               color="success"
               className="service-btn"
               sx={{
-                borderRadius: "32px !important", // принудительно округляем
+                borderRadius: "32px !important",
                 background: "#000",
                 color: "#D6FE51",
                 fontWeight: 600,
@@ -50,6 +50,7 @@ export default function Services() {
                   background: "#D6FE51",
                   color: "#000",
                   borderColor: "#D6FE51"
+                  // убрано boxShadow для этой кнопки
                 }
               }}
             >
@@ -76,7 +77,7 @@ export default function Services() {
               color="success"
               className="service-btn"
               sx={{
-                borderRadius: "32px !important", // принудительно округляем
+                borderRadius: "32px !important",
                 background: "#000",
                 color: "#D6FE51",
                 fontWeight: 600,
@@ -92,6 +93,7 @@ export default function Services() {
                   background: "#D6FE51",
                   color: "#000",
                   borderColor: "#D6FE51"
+                  // убрано boxShadow для этой кнопки
                 }
               }}
             >
@@ -118,7 +120,7 @@ export default function Services() {
               color="success"
               className="service-btn"
               sx={{
-                borderRadius: "32px !important", // принудительно округляем
+                borderRadius: "32px !important",
                 background: "#000",
                 color: "#D6FE51",
                 fontWeight: 600,
@@ -134,6 +136,7 @@ export default function Services() {
                   background: "#D6FE51",
                   color: "#000",
                   borderColor: "#D6FE51"
+                  // убрано boxShadow для этой кнопки
                 }
               }}
             >
