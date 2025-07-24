@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./Home.css";
+import "./Home.animations.css";
+import "./Home.nofocus.css";
 
 const fullText = [
   "Мы создаем сайты, которые продают.",

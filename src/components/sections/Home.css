@@ -79,8 +79,6 @@
   text-align: center;
   padding: 28px 18px;
   font-weight: 500;
-  animation: homeWave 14s linear infinite;
-  animation-timing-function: linear;
 }
 
 .home-welcome-text {
@@ -214,5 +212,151 @@
 .home-form-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Убрать стандартный outline и box-shadow для всех кнопок во всех секциях */
+button,
+.MuiButton-root,
+.service-btn,
+#home .home-btn,
+#home .home-btn-alt,
+#contacts .contacts-btn,
+#contacts button,
+#contacts .contacts-btn,
+#services .service-btn,
+#portfolio .portfolio-btn,
+#reviews .reviews-btn,
+footer .footer-contact-btn,
+footer button,
+footer .MuiButton-root {
+  outline: none !important;
+  /* box-shadow: none !important;  <-- убрано, чтобы не мешать кастомному свечению */
+}
+
+button:focus,
+button:focus-visible,
+.MuiButton-root:focus,
+.MuiButton-root:focus-visible,
+.service-btn:focus,
+.service-btn:focus-visible,
+#home .home-btn:focus,
+#home .home-btn:focus-visible,
+#home .home-btn-alt:focus,
+#home .home-btn-alt:focus-visible,
+#contacts .contacts-btn:focus,
+#contacts .contacts-btn:focus-visible,
+#contacts button:focus,
+#contacts button:focus-visible,
+#services .service-btn:focus,
+#services .service-btn:focus-visible,
+#portfolio .portfolio-btn:focus,
+#portfolio .portfolio-btn:focus-visible,
+#reviews .reviews-btn:focus,
+#reviews .reviews-btn:focus-visible,
+footer .footer-contact-btn:focus,
+footer .footer-contact-btn:focus-visible,
+footer button:focus,
+footer button:focus-visible,
+footer .MuiButton-root:focus,
+footer .MuiButton-root:focus-visible {
+  outline: none !important;
+  /* box-shadow: none !important;  <-- убрано, чтобы не мешать кастомному свечению */
+}
+
+/* Кастомное свечение для кнопок при hover и focus */
+#home .home-btn:hover,
+#home .home-btn:focus,
+#home .home-btn:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+}
+
+#home .home-btn-alt:hover,
+#home .home-btn-alt:focus,
+#home .home-btn-alt:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+}
+
+#services .service-btn:hover,
+#services .service-btn:focus,
+#services .service-btn:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+}
+
+#contacts .contacts-btn:hover,
+#contacts .contacts-btn:focus,
+#contacts .contacts-btn:focus-visible,
+#contacts button[type="submit"]:hover,
+#contacts button[type="submit"]:focus,
+#contacts button[type="submit"]:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+}
+
+footer .footer-contact-btn:hover,
+footer .footer-contact-btn:focus,
+footer .footer-contact-btn:focus-visible,
+footer button:hover,
+footer button:focus,
+footer button:focus-visible,
+footer .MuiButton-root:hover,
+footer .MuiButton-root:focus,
+footer .MuiButton-root:focus-visible {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+}
+
+/* Эффект увеличения кнопки при hover и focus */
+#home .home-btn,
+#home .home-btn-alt,
+#services .service-btn,
+#contacts .contacts-btn,
+#contacts button[type="submit"],
+footer .footer-contact-btn,
+footer button,
+footer .MuiButton-root {
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.18s cubic-bezier(.4,1.6,.4,1);
+}
+
+#home .home-btn:hover,
+#home .home-btn:focus,
+#home .home-btn:focus-visible,
+#home .home-btn-alt:hover,
+#home .home-btn-alt:focus,
+#home .home-btn-alt:focus-visible,
+#services .service-btn:hover,
+#services .service-btn:focus,
+#services .service-btn:focus-visible,
+#contacts .contacts-btn:hover,
+#contacts .contacts-btn:focus,
+#contacts .contacts-btn:focus-visible,
+#contacts button[type="submit"]:hover,
+#contacts button[type="submit"]:focus,
+#contacts button[type="submit"]:focus-visible,
+footer .footer-contact-btn:hover,
+footer .footer-contact-btn:focus,
+footer .footer-contact-btn:focus-visible,
+footer button:hover,
+footer button:focus,
+footer button:focus-visible,
+footer .MuiButton-root:hover,
+footer .MuiButton-root:focus,
+footer .MuiButton-root:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+  transform: scale(1.06);
 }
 

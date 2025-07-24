@@ -1,0 +1,121 @@
+/* Волнообразная анимация карточки */
+#home .home-video-box {
+  animation: homeWave 14s linear infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes homeWave {
+  0% {
+    transform: translateY(0) rotate(-2deg) scale(1.01);
+  }
+  12.5% {
+    transform: translateY(-8px) rotate(-1deg) scale(1.012);
+  }
+  25% {
+    transform: translateY(-16px) rotate(0deg) scale(1.018);
+  }
+  37.5% {
+    transform: translateY(-8px) rotate(1deg) scale(1.012);
+  }
+  50% {
+    transform: translateY(0) rotate(2deg) scale(1.01);
+  }
+  62.5% {
+    transform: translateY(8px) rotate(1deg) scale(1.008);
+  }
+  75% {
+    transform: translateY(16px) rotate(0deg) scale(1.012);
+  }
+  87.5% {
+    transform: translateY(8px) rotate(-1deg) scale(1.008);
+  }
+  100% {
+    transform: translateY(0) rotate(-2deg) scale(1.01);
+  }
+}
+
+/* Появление кнопок и формы */
+.typing-cursor {
+  display: inline-block;
+  width: 1.1ch;
+  height: 1.1em;
+  background: none;
+  border-right: 2px solid #D6FE51;
+  margin-left: 2px;
+  animation: blink-cursor 0.9s steps(1) infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink-cursor {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0; }
+}
+
+.home-animated-btns {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,1.6,.4,1), transform 0.7s cubic-bezier(.4,1.6,.4,1);
+  pointer-events: none;
+}
+.home-btns-in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.home-video {
+  transition: opacity 0.7s cubic-bezier(.4,1.6,.4,1), transform 0.7s cubic-bezier(.4,1.6,.4,1);
+  opacity: 0;
+  transform: translateX(60px);
+}
+.home-form-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Эффект увеличения кнопки при hover и focus */
+#home .home-btn,
+#home .home-btn-alt,
+#services .service-btn,
+#contacts .contacts-btn,
+#contacts button[type="submit"],
+footer .footer-contact-btn,
+footer button,
+footer .MuiButton-root {
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.18s cubic-bezier(.4,1.6,.4,1);
+}
+
+#home .home-btn:hover,
+#home .home-btn:focus,
+#home .home-btn:focus-visible,
+#home .home-btn-alt:hover,
+#home .home-btn-alt:focus,
+#home .home-btn-alt:focus-visible,
+#services .service-btn:hover,
+#services .service-btn:focus,
+#services .service-btn:focus-visible,
+#contacts .contacts-btn:hover,
+#contacts .contacts-btn:focus,
+#contacts .contacts-btn:focus-visible,
+#contacts button[type="submit"]:hover,
+#contacts button[type="submit"]:focus,
+#contacts button[type="submit"]:focus-visible,
+footer .footer-contact-btn:hover,
+footer .footer-contact-btn:focus,
+footer .footer-contact-btn:focus-visible,
+footer button:hover,
+footer button:focus,
+footer button:focus-visible,
+footer .MuiButton-root:hover,
+footer .MuiButton-root:focus,
+footer .MuiButton-root:focus-visible {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: 0 6px 18px 0 #D6FE5180 !important;
+  transform: scale(1.06);
+}
