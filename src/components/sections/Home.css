@@ -360,3 +360,19 @@ footer .MuiButton-root:focus-visible {
   transform: scale(1.06);
 }
 
+#home .home-btn,
+#home .home-btn-alt {
+  text-transform: none !important;
+}
+
+.home-gradient-text {
+  background: linear-gradient(90deg, #ddf396 0%, #b0f754 50%, #D6FE51 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  /* Можно добавить text-shadow для glow-эффекта */
+  /* text-shadow: 0 2px 12px #00ffd055; */
+}
+

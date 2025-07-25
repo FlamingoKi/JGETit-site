@@ -67,13 +67,13 @@ export default function Home() {
       <div className="home-left">
         <Typography
           variant="h1"
-          className="home-title"
+          className="home-title home-gradient-text"
           gutterBottom
           sx={{
             fontSize: { xs: "2.3rem", sm: "3.2rem", md: "4.2rem", lg: "4.8rem" },
             fontWeight: 900,
             lineHeight: 1.13,
-            color: "#D6FE51",
+            // color: "#D6FE51", // можно удалить, если используете градиент
             textAlign: "left",
             mb: 4,
             letterSpacing: "-0.03em",
