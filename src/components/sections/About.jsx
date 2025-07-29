@@ -5,15 +5,16 @@ import "./About.css";
 export default function About() {
   return (
     <section id="about">
-      <Typography variant="h4" align="center" gutterBottom>
-        О нас
+      <Typography variant="h4" align="center" gutterBottom className="about-title">
+        <span className="about-title-white">О</span>
+        <span className="about-title-green">нас</span>
       </Typography>
       <Typography variant="subtitle1" align="center" className="about-subtitle" gutterBottom>
         Инновации в цифровой сфере с передовыми решениями
       </Typography>
       <div className="about-row">
         <div className="about-left">
-          <div className="about-block" >
+          <div className="about-block">
             <Typography variant="h6" className="about-block-title" gutterBottom>
               Наша миссия
             </Typography>
