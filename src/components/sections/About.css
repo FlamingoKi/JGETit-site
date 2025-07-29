@@ -3,38 +3,48 @@
   color: #D6FE51;
 }
 .about-title {
-  font-size: 2.7rem;
-  font-weight: 900;
+  font-size: 3rem !important; /* стало еще больше */
+  font-weight: 750 !important; /* максимально жирный */
+  font-stretch: ultra-expanded;
   text-align: center;
   margin-bottom: 0;
   letter-spacing: -0.02em;
-  line-height: 1.1;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 0.2em;
+  line-height: 1.05;
+  display: block; /* убираем flex для корректного рендеринга */
+  text-transform: uppercase;
+  color: inherit !important;
+}
+.about-gradient-text {
+  background: linear-gradient(90deg, #ddf396 0%, #b0f754 50%, #D6FE51 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  /* text-shadow: 0 2px 12px #00ffd055;  // опционально для glow-эффекта */
 }
 .about-title-white {
-  color: #fff;
+  color: #fff !important;
 }
 .about-title-green {
-  color: #D6FE51;
+  color: #D6FE51 !important;
   margin-left: 0.15em;
 }
 #about .about-subtitle {
+  color: #fff;
+  font-weight: 100 !important;
+  font-size: 1.10rem;
   text-align: center;
-  font-size: 1.08rem;
-  font-weight: 500;
+  margin-top: 44px;
   margin-bottom: 32px;
-  color: #D6FE51;
   letter-spacing: 0.01em;
-  opacity: 0.95;
+  opacity: 1;
 }
 #about .about-row {
   display: flex;
   gap: 150px; /* увеличено расстояние между текстом и формой */
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch; /* было flex-start, теперь растягиваем */
   flex-wrap: wrap;
   max-width: 1100px;
   margin: 0 auto;
@@ -43,10 +53,10 @@
 #about .about-left {
   flex: 2;
   min-width: 320px;
-  max-width: 700px; /* еще шире */
+  max-width: 700px; /* вернули как было */
   display: flex;
   flex-direction: column;
-  gap: 40px; /* увеличено расстояние между блоками */
+  gap: 40px; /* вернули как было */
 }
 #about .about-block {
   /* убран фон, обводка, тень */
@@ -66,12 +76,17 @@
   letter-spacing: 0.01em;
 }
 #about .about-block-text {
-  font-size: 1.18rem;
+  font-size: 1.05rem;           /* уменьшили размер шрифта */
   color: #fff;
-  line-height: 1.85; /* еще больше */
-  letter-spacing: 0.01em;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
   opacity: 0.96;
-  max-width: 680px; /* еще шире */
+  max-width: 900px;             /* увеличили ширину */
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;        /* максимум 3 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 #about .about-right {
   flex: 1;
@@ -81,18 +96,24 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
+  height: 100%;
+  align-self: flex-start; /* поднимает форму вверх */
 }
+
 #about .about-stats {
   background: #0d1a0a;
   border-radius: 16px;
   padding: 40px 28px;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 16px #0d1a0a55;
-  border: 1px solid #D6FE51; /* стало тоньше */
+  border: 1px solid #D6FE51;
+  align-self: flex-start; /* поднимает форму вверх */
+  margin-top: 0; /* убирает возможные отступы сверху */
 }
 #about .about-stats-number {
   font-size: 2.5rem; /* чуть меньше */
