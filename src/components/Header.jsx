@@ -30,31 +30,43 @@ export default function Header() {
   }, []);
 
   return (
-    <AppBar position="fixed" color="default" elevation={0} sx={{ background: "#000" }}>
-      <Toolbar sx={{ justifyContent: "flex-start", minHeight: "90px", px: { xs: 2, md: 6 } }}>
+    <AppBar
+      position="fixed"
+      color="default"
+      elevation={0}
+      sx={{ background: "#000", height: "90px" }} // Явно задаем высоту AppBar
+    >
+      <Toolbar
+        sx={{
+          justifyContent: "flex-start",
+          minHeight: "180px",
+          height: "180px",
+          px: { xs: 2, md: 6 },
+        }}
+      >
         <Box sx={{ display: "flex", alignItems: "center", flex: "0 0 auto" }}>
           <img
             src="/logo.png"
             alt="Логотип"
             style={{
-              height: 150,
-              width: 150,
+              height: 200, // увеличено
+              width: 200,  // увеличено
               objectFit: "contain",
               display: "block",
             }}
           />
         </Box>
-        <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end", ml: { xs: 30, md: 80 } }}>
-          <List sx={{ display: "flex", gap: 3, p: 0, m: 0 }}>
+        <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end", ml: { xs: 8, md: 32 } }}>
+          <List sx={{ display: "flex", gap: 1, p: 0, m: 0 }}>
             {navLinks.map((item) => (
               <ListItem key={item.href} disablePadding sx={{ width: "auto" }}>
                 <ListItemButton
                   component="a"
                   href={item.href}
                   sx={{
-                    color: "#D6FE51",
-                    px: 2,
-                    py: 1,
+                    color: "#fff",
+                    px: 3,
+                    py: 2,
                     borderRadius: 0,
                     transition: "color 0.2s",
                     position: "relative",
@@ -79,7 +91,7 @@ export default function Header() {
                 >
                   <ListItemText
                     primary={
-                      <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                      <Typography variant="body1" sx={{ fontWeight: 500, color: "#fff", fontSize: "1.1rem" }}>
                         {item.label}
                       </Typography>
                     }
