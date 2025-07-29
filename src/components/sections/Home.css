@@ -2,20 +2,20 @@
 #home {
   width: 100%;
   max-width: none;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 80vh; /* было 100vh */
+  height: 90vh;     /* было 100vh */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding-top: 90px;
+  gap: 0; /* было 40px */
+  padding-top: 30px; /* было 90px */
   box-sizing: border-box;
 }
 
 #home .home-left,
 #home .home-video {
   flex: unset;
-  max-width: 600px; /* увеличено с 420px */
+  max-width: 800px; /* было 600px */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,14 +25,14 @@
 }
 
 #home .home-title {
-  font-size: 3.2rem; /* Было 2rem */
+  font-size: 3.8rem; /* было 3.2rem */
   font-weight: 900;
   line-height: 1.13;
   margin-bottom: 32px;
   color: #D6FE51;
   text-align: left; /* Было center */
   letter-spacing: -0.03em;
-  max-width: 600px;
+  max-width: 800px; /* было 600px */
   /* Можно добавить небольшой отступ слева для мобильных */
   padding-left: 0;
   word-break: normal !important;
@@ -42,7 +42,7 @@
 
 @media (max-width: 600px) {
   #home .home-title {
-    font-size: 2.3rem;
+    font-size: 2.7rem; /* было 2.3rem */
     padding-left: 0;
     max-width: 100%;
   }
@@ -50,7 +50,7 @@
 
 #home .home-btns {
   display: flex;
-  gap: 16px;
+  gap: 22px; /* чуть больше */
   justify-content: center; /* Центрируем кнопки */
 }
 
@@ -60,13 +60,14 @@
   justify-content: center;
   align-items: center;
   min-height: 220px;
+  margin-left: -48px; /* сдвигаем форму ближе к тексту */
   /* Удалить дублирующиеся opacity/transform, оставить только для анимации появления */
 }
 
 #home .home-video-box {
   width: 100%;
-  max-width: 340px;
-  height: 520px; /* было 400px, теперь еще выше */
+  max-width: 360px; /* увеличено */
+  height: 650px;    /* увеличено */
   background: #D6FE51;
   border: 2px solid #D6FE51;
   border-radius: 18px;
@@ -74,10 +75,10 @@
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 1.18rem;
+  font-size: 1.35rem; /* было 1.18rem */
   box-shadow: 0 0 32px 0 #D6FE51cc;
   text-align: center;
-  padding: 28px 18px;
+  padding: 38px 24px; /* было 28px 18px */
   font-weight: 500;
 }
 
@@ -85,7 +86,7 @@
   width: 100%;
   text-align: center;
   color: #000;
-  font-size: 1.18rem;
+  font-size: 1.35rem; /* было 1.18rem */
   font-weight: 500;
   line-height: 1.5;
 }
@@ -100,8 +101,8 @@
   color: #000;
 }
 #home .home-btn-alt {
-  padding: 12px 28px;
-  font-size: 1rem;
+  padding: 16px 36px; /* было 12px 28px */
+  font-size: 1.18rem; /* было 1rem */
   font-weight: 600;
   background: #000;
   color: #fff;
@@ -123,8 +124,8 @@
 }
 #home .home-video-box {
   width: 100%;
-  max-width: 340px;
-  height: 520px; /* было 400px, теперь еще выше */
+  max-width: 360px; /* увеличено */
+  height: 650px;    /* увеличено */
   background: #D6FE51;
   border: 2px solid #D6FE51;
   border-radius: 18px;
@@ -132,10 +133,10 @@
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 1.18rem;
+  font-size: 1.35rem; /* было 1.18rem */
   box-shadow: 0 0 32px 0 #D6FE51cc;
   text-align: center;
-  padding: 28px 18px;
+  padding: 38px 24px; /* было 28px 18px */
   font-weight: 500;
   animation: homeWave 14s linear infinite;
   animation-timing-function: linear;
@@ -363,6 +364,7 @@ footer .MuiButton-root:focus-visible {
 #home .home-btn,
 #home .home-btn-alt {
   text-transform: none !important;
+  font-size: 1.35rem; /* было 1.18rem */
 }
 
 .home-gradient-text {
