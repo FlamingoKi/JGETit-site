@@ -6,8 +6,9 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-top: 44px;
   margin-bottom: 32px;
-  color: #D6FE51;
+  color: #fff;
 }
 #services .services-row {
   display: flex;
@@ -16,39 +17,124 @@
   flex-wrap: nowrap;
   max-width: 100%;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow-x: visible; /* было auto, теперь видно вылезающие элементы */
   padding-bottom: 16px;
+  align-items: stretch; /* выравниваем карточки по высоте */
 }
 #services .service-card {
-  flex: 1;
-  min-width: 280px;
+  flex: 1 1 340px;
+  min-width: 340px;
   max-width: 340px;
-  background: #000;
+  min-height: 520px;
+  max-height: 520px;
+  height: 520px;
+  background: #0a1206; /* фон как у формы about */
+  border: 1.5px solid #232e13 !important; /* граница как у формы about */
   border-radius: 12px;
   padding: 24px 16px;
   box-shadow: 0 2px 8px #0001;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: stretch;
   margin-bottom: 20px;
   border: 2px solid #D6FE51;
+  transition:
+    transform 0.22s cubic-bezier(.4,1.6,.4,1),
+    box-shadow 0.22s cubic-bezier(.4,1.6,.4,1),
+    border-color 0.22s cubic-bezier(.4,1.6,.4,1);
+  position: relative; /* для блика */
+}
+#services .service-card::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: -30%;
+  top: -60%;
+  width: 60%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    rgba(214,254,81,0.0) 0%,
+    rgba(214,254,81,0.18) 48%,
+    rgba(214,254,81,0.32) 55%,
+    rgba(214,254,81,0.18) 62%,
+    rgba(214,254,81,0.0) 100%
+  );
+  opacity: 0;
+  filter: blur(32px); /* еще сильнее размытие */
+  transform: skewX(-18deg) translateX(-80px) scaleY(0.85); /* чуть дальше и ниже */
+  transition:
+    opacity 0.32s cubic-bezier(.4,1.6,.4,1),
+    transform 0.7s cubic-bezier(.4,1.6,.4,1);
+  border-radius: 18px;
+  z-index: 3;
+}
+#services .service-card:hover::after,
+#services .service-card:focus::after,
+#services .service-card:focus-visible::after {
+  opacity: 0.5; /* делаем блик еще менее заметным */
+  transform: skewX(-18deg) translateX(220px) scaleY(1);
+  transition:
+    opacity 0.32s cubic-bezier(.4,1.6,.4,1),
+    transform 0.7s cubic-bezier(.4,1.6,.4,1);
+}
+#services .service-card:hover,
+#services .service-card:focus,
+#services .service-card:focus-visible {
+  transform: scale(1.045);
+  box-shadow: 0 0 32px 0 #d6fe5180, 0 4px 24px 0 #0a1206cc;
+  border-color: #D6FE51 !important;
+  z-index: 2;
+}
+#services .service-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 auto;
 }
 #services .service-title {
-  font-size: 1.15rem;
+  font-size: 1.28rem; /* увеличено для читаемости */
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #D6FE51;
 }
 #services .service-desc {
-  font-size: 1rem;
+  font-size: 1.12rem; /* увеличено для читаемости */
   color: #fff;
   margin-bottom: 16px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 #services ul {
   margin: 0 0 18px 18px;
   padding: 0;
   color: #D6FE51;
-  font-size: 0.98rem;
+  font-size: 1.08rem; /* увеличено для читаемости */
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#services ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  list-style: none;
+}
+#services .service-check-icon {
+  color: #D6FE51;
+  font-size: 1.15em;
+  margin-right: 4px;
+  flex-shrink: 0;
 }
 #services .service-btn {
   margin-top: auto;
@@ -61,8 +147,27 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  text-transform: none !important; /* убираем капс */
+}
+#services .service-btn-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 #services .service-btn:hover {
   background: #D6FE51;
   color: #000;
+}
+/* Кружок с иконкой */
+#services .service-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #D6FE51;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 2px 12px #d6fe5133;
 }
