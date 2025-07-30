@@ -85,6 +85,7 @@
   text-align: justify;
   display: -webkit-box;
   -webkit-line-clamp: 3;        /* максимум 3 строки */
+  line-clamp: 3;                /* стандартное свойство для совместимости */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -102,18 +103,22 @@
 }
 
 #about .about-stats {
-  background: #0d1a0a;
+  background: #0a1206;           /* был #0d1a0a, стал темнее */
   border-radius: 16px;
   padding: 40px 28px;
-  width: 100%;
+  width: 320px;         /* было 100%, теперь фиксированная ширина */
+  max-width: 410px;     /* увеличено для большей длины */
+  min-width: 260px;     /* можно добавить для адаптивности */
   height: 100%;
+  min-height: 420px;    /* увеличьте это значение по желанию */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* добавьте эту строку для вертикального центрирования */
   box-shadow: 0 2px 16px #0d1a0a55;
-  border: 1px solid #D6FE51;
-  align-self: flex-start; /* поднимает форму вверх */
-  margin-top: 0; /* убирает возможные отступы сверху */
+  border: 1.5px solid #232e13;   /* был #D6FE51, стал темнее */
+  align-self: flex-start;
+  margin-top: 0;
 }
 #about .about-stats-number {
   font-size: 2.5rem; /* чуть меньше */
