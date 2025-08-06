@@ -5,14 +5,27 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
+import "../sections/About.css"; // добавить стили about-title
+import "./Contacts.css"; // убедитесь, что стили подключены
 
 export default function Contacts() {
   return (
     <Box component="section" id="contacts" sx={{ mb: 6, width: "100%", maxWidth: 900, mx: "auto" }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        Свяжитесь с нами
+      <Typography
+        variant="h1"
+        align="center"
+        gutterBottom
+        className="about-title"
+      >
+        <span className="about-title-white">Связаться</span>
+        <span className="about-title-green">с нами</span>
       </Typography>
-      <Typography variant="subtitle1" align="center" gutterBottom>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        className="contacts-subtitle"
+        gutterBottom
+      >
         Готовы начать свой следующий проект? Давайте обсудим ваши потребности
       </Typography>
       <Stack direction={{ xs: "column", md: "row" }} spacing={5} justifyContent="center" alignItems="flex-start" sx={{ mt: 4 }}>
