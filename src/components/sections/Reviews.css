@@ -2,12 +2,32 @@
   text-align: center;
   color: #D6FE51;
 }
+.about-title {
+  font-size: 3rem !important;
+  font-weight: 750 !important;
+  font-stretch: ultra-expanded;
+  text-align: center;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  display: block;
+  text-transform: uppercase;
+  color: inherit !important;
+}
+.about-title-white {
+  color: #fff !important;
+}
+.about-title-green {
+  color: #D6FE51 !important;
+  margin-left: 0.15em;
+}
 #reviews .reviews-subtitle {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-top: 44px;
   margin-bottom: 32px;
-  color: #D6FE51;
+  color: #fff;
 }
 #reviews .reviews-box {
   width: 100%;
@@ -23,5 +43,84 @@
   font-size: 1.1rem;
   box-shadow: 0 2px 8px #0001;
   border: 2px solid #D6FE51;
+}
+.reviews-form-box {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #0a1206;
+  border-radius: 18px;
+  min-height: 160px;
+  padding: 32px 28px 24px 28px;
+  border: 2px solid #232e13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* добавлено для вертикального центрирования */
+  box-shadow: 0 2px 16px #0002;
+  margin-bottom: 32px;
+  transition: opacity 0.5s cubic-bezier(.4,1.6,.4,1), transform 0.5s cubic-bezier(.4,1.6,.4,1);
+  opacity: 1;
+  /* начальное положение по центру */
+  transform: translateX(0);
+}
+.reviews-fade-in {
+  opacity: 1;
+  transform: translateX(-60px);
+  pointer-events: auto;
+  animation: reviews-slide-in 0.5s cubic-bezier(.4,1.6,.4,1) forwards;
+}
+.reviews-fade-out {
+  opacity: 0;
+  pointer-events: none;
+  animation: reviews-slide-out 0.5s cubic-bezier(.4,1.6,.4,1) forwards;
+}
+
+@keyframes reviews-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reviews-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+.reviews-text {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 40px !important; /* увеличено расстояние до имени */
+  letter-spacing: 0.01em;
+  text-align: center;
+  font-style: italic;
+}
+.reviews-author {
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-align: center; /* центрируем */
+}
+.reviews-meta {
+  color: #D6FE51; /* изменено */
+  font-size: 0.98rem;
+  font-weight: 400;
+  opacity: 1;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+  text-align: center; /* центрируем */
 }
 
