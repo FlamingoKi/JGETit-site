@@ -140,13 +140,13 @@ export default function Contacts() {
           elevation={0}
           sx={{
             flex: 1,
-            minWidth: { xs: "100%", md: 320 },
-            maxWidth: 420,
-            p: 3,
+            minWidth: { xs: "100%", md: 440 },
+            maxWidth: 700,
+            p: 5,
             mb: 3,
-            borderRadius: "18px",
+            borderRadius: "32px",
             background: "#0a1206",
-            border: "2px solid #232e13"
+            border: "1.5px solid #232e13"
           }}
         >
           <form onSubmit={handleSubmit}>
@@ -159,9 +159,13 @@ export default function Contacts() {
               fullWidth
               margin="normal"
               sx={{
+                borderRadius: "18px",
+                fontSize: "1.18rem",
                 "& .MuiOutlinedInput-root": {
                   color: "#fff",
                   background: "#181c1a",
+                  borderRadius: "18px",
+                  fontSize: "1.18rem",
                   "& input": {
                     color: "#fff"
                   },
@@ -182,7 +186,8 @@ export default function Contacts() {
                   }
                 },
                 "& .MuiInputLabel-root": {
-                  color: "#fff"
+                  color: "#fff",
+                  fontSize: "1.1rem"
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                   color: "#D6FE51"
@@ -202,9 +207,13 @@ export default function Contacts() {
               fullWidth
               margin="normal"
               sx={{
+                borderRadius: "18px",
+                fontSize: "1.18rem",
                 "& .MuiOutlinedInput-root": {
                   color: "#fff",
                   background: "#181c1a",
+                  borderRadius: "18px",
+                  fontSize: "1.18rem",
                   "& input": {
                     color: "#fff"
                   },
@@ -225,7 +234,8 @@ export default function Contacts() {
                   }
                 },
                 "& .MuiInputLabel-root": {
-                  color: "#fff"
+                  color: "#fff",
+                  fontSize: "1.1rem"
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                   color: "#D6FE51"
@@ -246,9 +256,13 @@ export default function Contacts() {
               multiline
               minRows={4}
               sx={{
+                borderRadius: "18px",
+                fontSize: "1.18rem",
                 "& .MuiOutlinedInput-root": {
                   color: "#fff",
                   background: "#181c1a",
+                  borderRadius: "18px",
+                  fontSize: "1.18rem",
                   "& textarea": {
                     color: "#fff"
                   },
@@ -269,7 +283,8 @@ export default function Contacts() {
                   }
                 },
                 "& .MuiInputLabel-root": {
-                  color: "#fff"
+                  color: "#fff",
+                  fontSize: "1.1rem"
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                   color: "#D6FE51"
@@ -284,11 +299,17 @@ export default function Contacts() {
               variant="contained"
               disabled={submitted}
               sx={{
-                mt: 2,
-                fullWidth: true,
+                mt: 3,
+                py: 1.2,
+                borderRadius: "32px",
+                fontSize: "1.08rem",
                 background: "#D6FE51",
                 color: "#000",
                 fontWeight: 700,
+                width: "100%",
+                alignSelf: "center",
+                whiteSpace: "nowrap",
+                display: "block",
                 "&:hover": {
                   background: "#D6FE51",
                   color: "#000"
