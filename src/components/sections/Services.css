@@ -159,6 +159,13 @@
   background: #D6FE51;
   color: #000;
 }
+#services .service-btn:active {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: none !important;
+  transform: scale(1.00);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.18s cubic-bezier(.4,1.6,.4,1);
+}
 /* Кружок с иконкой */
 #services .service-icon-circle {
   width: 64px;

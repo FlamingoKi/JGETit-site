@@ -119,6 +119,7 @@ export default function Home() {
             }}
             tabIndex={showButtons ? 0 : -1}
             style={{ pointerEvents: showButtons ? "auto" : "none" }}
+            onMouseUp={e => e.currentTarget.blur()}
           >
             Начать
           </Button>
@@ -147,6 +148,7 @@ export default function Home() {
             }}
             tabIndex={showButtons ? 0 : -1}
             style={{ pointerEvents: showButtons ? "auto" : "none" }}
+            onMouseUp={e => e.currentTarget.blur()}
           >
             Воплотить идею в код
           </Button>

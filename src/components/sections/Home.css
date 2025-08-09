@@ -378,3 +378,19 @@ footer .MuiButton-root:focus-visible {
   /* text-shadow: 0 2px 12px #00ffd055; */
 }
 
+#home .home-btn:active,
+#home .home-btn-alt:active,
+#services .service-btn:active,
+#contacts .contacts-btn:active,
+#contacts button[type="submit"]:active,
+footer .footer-contact-btn:active,
+footer button:active,
+footer .MuiButton-root:active {
+  background: #D6FE51;
+  color: #000;
+  box-shadow: none !important;
+  transform: scale(1.00);
+  /* Можно добавить transition для плавного возврата */
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.18s cubic-bezier(.4,1.6,.4,1);
+}
+

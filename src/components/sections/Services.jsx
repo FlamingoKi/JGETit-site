@@ -77,6 +77,7 @@ export default function Services() {
                     borderColor: "#D6FE51"
                   }
                 }}
+                onMouseUp={e => e.currentTarget.blur()}
               >
                 Узнать больше
               </Button>
@@ -129,6 +130,7 @@ export default function Services() {
                     borderColor: "#D6FE51"
                   }
                 }}
+                onMouseUp={e => e.currentTarget.blur()}
               >
                 Узнать больше
               </Button>
@@ -181,6 +183,7 @@ export default function Services() {
                     borderColor: "#D6FE51"
                   }
                 }}
+                onMouseUp={e => e.currentTarget.blur()}
               >
                 Узнать больше
               </Button>
