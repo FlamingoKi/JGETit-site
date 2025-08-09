@@ -51,3 +51,32 @@
   color: #D6FE51;
   margin-bottom: 20px;
 }
+.contacts-btn-fade {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s cubic-bezier(.4,1.6,.4,1), transform 0.35s cubic-bezier(.4,1.6,.4,1);
+  will-change: opacity, transform;
+}
+
+.contacts-btn-hide {
+  opacity: 0 !important;
+  transform: translateY(-18px) scale(0.98) !important;
+  pointer-events: none;
+}
+
+.contacts-btn-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: contacts-btn-fadein 0.35s cubic-bezier(.4,1.6,.4,1);
+}
+
+@keyframes contacts-btn-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -11,6 +11,7 @@ import "./Contacts.css";
 export default function Contacts() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,10 +19,13 @@ export default function Contacts() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Здесь может быть отправка данных на сервер
-    setTimeout(() => setSubmitted(false), 2000);
-    setForm({ name: "", email: "", message: "" });
+    setFadeOut(true);
+    setTimeout(() => {
+      setSubmitted(true);
+      setFadeOut(false);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 2000);
+    }, 350); // Длительность анимации исчезновения кнопки
   };
 
   return (
@@ -314,31 +318,61 @@ export default function Contacts() {
                 }
               }}
             />
-            <Button
-              type="submit"
-              variant="contained"
-              disabled={submitted}
-              sx={{
-                mt: 3,
-                py: 1.2,
-                borderRadius: "32px",
-                fontSize: "1.08rem",
-                background: "#D6FE51",
-                color: "#000",
-                fontWeight: 700,
+            <div
+              style={{
                 width: "100%",
                 maxWidth: 400,
                 alignSelf: "center",
-                whiteSpace: "nowrap",
-                display: "block",
-                "&:hover": {
-                  background: "#D6FE51",
-                  color: "#000"
-                }
+                minHeight: 64,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "32px 0 0 0", // отступ сверху
+                position: "relative"
               }}
             >
-              {submitted ? "Отправлено!" : "Отправить сообщение"}
-            </Button>
+              {!submitted && (
+                <Button
+                  type="submit"
+                  variant="contained"
+                  disabled={fadeOut}
+                  className={`contacts-btn-fade${fadeOut ? " contacts-btn-hide" : ""}`}
+                  sx={{
+                    py: 1.2,
+                    borderRadius: "32px",
+                    fontSize: "1.08rem",
+                    background: "#D6FE51",
+                    color: "#000",
+                    fontWeight: 700,
+                    width: "100%",
+                    maxWidth: 400,
+                    alignSelf: "center",
+                    whiteSpace: "nowrap",
+                    display: "block",
+                    transition: "none"
+                  }}
+                >
+                  Отправить сообщение
+                </Button>
+              )}
+              {submitted && (
+                <Typography
+                  className="contacts-btn-fade contacts-btn-show"
+                  sx={{
+                    color: "#D6FE51",
+                    fontWeight: 600,
+                    width: "100%",
+                    maxWidth: 400,
+                    alignSelf: "center",
+                    textAlign: "center",
+                    fontSize: "1.13rem",
+                    transition: "none"
+                  }}
+                >
+                  Спасибо! Ваше сообщение отправлено.
+                </Typography>
+              )}
+            </div>
           </form>
         </Paper>
       </Stack>
