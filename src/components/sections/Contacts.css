@@ -4,30 +4,6 @@
   color: #D6FE51;
   margin-bottom: 20px;
 }
-#contacts .contacts-input {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #D6FE51;
-  font-size: 1rem;
-  background: #000;
-  color: #fff;
-  margin-bottom: 8px;
-}
-#contacts .contacts-btn {
-  padding: 12px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #D6FE51;
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-#contacts .contacts-btn:hover {
-  background: #fff;
-  color: #000;
-}
 #contacts {
   margin-bottom: 32px;
   width: 100%;
@@ -74,41 +50,4 @@
   font-size: 1rem;
   color: #D6FE51;
   margin-bottom: 20px;
-}
-#contacts form {
-  flex: 1;
-  min-width: 200px;
-  max-width: 270px;
-  background: #000;
-  border-radius: 12px;
-  padding: 18px 12px;
-  box-shadow: 0 2px 8px #0001;
-  margin-bottom: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border: 2px solid #D6FE51;
-}
-#contacts input, #contacts textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #D6FE51;
-  font-size: 1rem;
-  background: #000;
-  color: #fff;
-}
-#contacts button[type="submit"] {
-  padding: 12px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #D6FE51;
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-#contacts button[type="submit"]:hover {
-  background: #fff;
-  color: #000;
 }
