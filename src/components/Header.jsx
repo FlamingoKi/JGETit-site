@@ -29,6 +29,23 @@ export default function Header() {
     }
   }, []);
 
+  // Добавим обработчик для плавного скролла с учетом высоты header
+  const handleNavClick = (e, href) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        // Высота header (можно вынести в переменную, если меняется)
+        const headerHeight = 90;
+        const rect = el.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const top = rect.top + scrollTop - headerHeight - 16; // 16px запас для воздуха
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -63,6 +80,7 @@ export default function Header() {
                 <ListItemButton
                   component="a"
                   href={item.href}
+                  onClick={e => handleNavClick(e, item.href)}
                   sx={{
                     color: "#fff",
                     px: 3,
