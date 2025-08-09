@@ -48,7 +48,7 @@ export default function Contacts() {
         spacing={5}
         justifyContent="center"
         alignItems="stretch"
-        sx={{ mt: 4 }}
+        sx={{ mt: 4, gap: { xs: 4, md: 8 } }} // добавлено gap для увеличения расстояния между колонками
       >
         <Paper
           elevation={0}
@@ -70,7 +70,8 @@ export default function Contacts() {
               color: "#D6FE51",
               fontWeight: 700,
               letterSpacing: "0.04em",
-              mb: 1
+              mb: 1,
+              fontSize: "1.35rem"
             }}
             gutterBottom
           >
@@ -82,7 +83,8 @@ export default function Contacts() {
               color: "#fff",
               fontWeight: 600,
               letterSpacing: "0.04em",
-              mb: 2
+              mb: 2,
+              fontSize: "1.18rem"
             }}
             gutterBottom
           >
@@ -94,7 +96,8 @@ export default function Contacts() {
               color: "#D6FE51",
               fontWeight: 700,
               letterSpacing: "0.04em",
-              mb: 1
+              mb: 1,
+              fontSize: "1.35rem"
             }}
             gutterBottom
           >
@@ -106,7 +109,8 @@ export default function Contacts() {
               color: "#fff",
               fontWeight: 600,
               letterSpacing: "0.04em",
-              mb: 2
+              mb: 2,
+              fontSize: "1.18rem"
             }}
             gutterBottom
           >
@@ -118,7 +122,8 @@ export default function Contacts() {
               color: "#D6FE51",
               fontWeight: 700,
               letterSpacing: "0.04em",
-              mb: 1
+              mb: 1,
+              fontSize: "1.35rem"
             }}
             gutterBottom
           >
@@ -130,7 +135,8 @@ export default function Contacts() {
               color: "#fff",
               fontWeight: 600,
               letterSpacing: "0.04em",
-              mb: 0
+              mb: 0,
+              fontSize: "1.18rem"
             }}
           >
             ул. Инновационная, 123<br />Москва, 123456
@@ -146,10 +152,21 @@ export default function Contacts() {
             mb: 3,
             borderRadius: "32px",
             background: "#0a1206",
-            border: "1.5px solid #232e13"
+            border: "1.5px solid #232e13",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
           }}
         >
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={handleSubmit}
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}
+          >
             <TextField
               label="Имя"
               name="name"
@@ -158,6 +175,7 @@ export default function Contacts() {
               required
               fullWidth
               margin="normal"
+              InputLabelProps={{ required: false }}
               sx={{
                 borderRadius: "18px",
                 fontSize: "1.18rem",
@@ -206,6 +224,7 @@ export default function Contacts() {
               required
               fullWidth
               margin="normal"
+              InputLabelProps={{ required: false }}
               sx={{
                 borderRadius: "18px",
                 fontSize: "1.18rem",
@@ -255,6 +274,7 @@ export default function Contacts() {
               margin="normal"
               multiline
               minRows={4}
+              InputLabelProps={{ required: false }}
               sx={{
                 borderRadius: "18px",
                 fontSize: "1.18rem",
@@ -307,6 +327,7 @@ export default function Contacts() {
                 color: "#000",
                 fontWeight: 700,
                 width: "100%",
+                maxWidth: 400,
                 alignSelf: "center",
                 whiteSpace: "nowrap",
                 display: "block",
